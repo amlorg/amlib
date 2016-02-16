@@ -7,7 +7,7 @@
 ## 第二步	require模块
 
 ``` javascript
-var json = amlib.require(path);
+var json = amlib.require('json');
 
 ```
 
@@ -17,12 +17,14 @@ var json = amlib.require(path);
 
 ​	若path后面没有写文件扩展名，将依次添加.js  .jsx  .jsxbin进行尝试
 
-## 第三步	使用已经require的模块
+## 第三步	使用require过的模块
 
 ``` javascript
 var j = {a: 1, b: 2};
 json.stringify(j) // '{"a": 1, "b": 2}'
 ```
+
+
 
 ***
 
