@@ -89,6 +89,7 @@ function relPath(module_name, hasformat) {
 function loadFile(module_file, module_name) {
 	var module_str = ';var module = amlib.loaded_module["' + module_name + '"];\n';
 	module_str += readFile(module_file);
+	module_str = ";(function() {" + module_str + "})();";
 	amlib.require.path_queue.unshift(getPath(module_file));
 	eval(module_str);
 	amlib.require.path_queue.shift();
